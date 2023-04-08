@@ -6,6 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./../css/send.css">
+  <link rel="preload" href='./fonts/montserrat-400.woff2' as="font"
+    type="font/woff2" crossorigin>
+     <link rel="preload" href='./fonts/montserrat-500.woff2' as="font"
+    type="font/woff2" crossorigin>
+     <link rel="preload" href='./fonts/montserrat-600.woff2' as="font"
+    type="font/woff2" crossorigin>
+     <link rel="preload" href='./fonts/montserrat-700.woff2' as="font"
+    type="font/woff2" crossorigin>
 </head>
 <body>
   <div class="hero">
@@ -14,8 +22,8 @@
       <p class="hero__subtitle">Оставьте свой номер <span class="green">WhatsApp</span>, и наш менеджер отправит 
       туда варианты туров</p>
       <form action="mail.php" class="hero__form" method="POST">
-        <input class="hero__input hero__phone" type="tel" name="tel" placeholder="Ваш телефон" required>
-        <input class="hero__input hero__name" type="text" name="name" placeholder="Ваше имя" required>
+        <div class="hero__phone-wrapper"><div class="hero__phone-img"></div><input class="hero__input hero__phone" type="tel" name="tel" placeholder="Ваш телефон" required></div>
+        <div class="hero__name-wrapper"><div class="hero__name-img"></div><input class="hero__input hero__name" type="text" name="name" placeholder="Ваше имя" required></div>
         <input class="hero__input hero__submit"type="submit" value="Получить подбороку">
         <label class="hero__checkbox-wrapper">
           <input type="checkbox" name="" id="" required>

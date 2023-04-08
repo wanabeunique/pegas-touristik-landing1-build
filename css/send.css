@@ -1,10 +1,54 @@
-body{
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../resources/fonts/montserrat-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../resources/fonts/montserrat-500.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../resources/fonts/montserrat-600.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../resources/fonts/montserrat-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../resources/fonts/montserrat-800.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal
+}
+
+
+html, *, body{
   margin: 0;
+  font-family: "Montserrat";
 }
 
 .hero{
   width: 100vw;
   height: 100vh;
+  margin: 0 auto;
 }
 
 .hero__wrapper{
@@ -14,7 +58,7 @@ body{
   width: 70vw;
   height: 70vh;
   background: red;
-  display: flex;
+  display: flex;  
   flex-direction: column;
   box-sizing: border-box;
   background: rgba(229, 235, 245, 0.85);
@@ -30,7 +74,7 @@ body{
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 90vw;
+  width: 100vw;
   height: 90vh;
   background-image: url(
     "/img/quiz/quiz-bg.jpg"
@@ -117,12 +161,116 @@ body{
   position: relative;
 }
 
-.hero__phone::before{
-  content: '123';
+
+.hero__phone-wrapper{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__phone-img{
+  position: relative;
+}
+
+.hero__phone-img::before{
+  content: '';
   position: absolute;
-  top: 0;
-  left: 20px;
-  width: 24px;
-  height: 24px;
+  top: calc(50% - 15px);
+  left: 10px;
+  width: 30px;
+  height: 30px;
   background-image: url('/img/quiz/WhatsApp.svg');
+  z-index: 5;
+}
+
+.hero__name-img{
+  position: relative;
+}
+
+.hero__name-wrapper{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__name-img::before{
+  content: '';
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 15px;
+  width: 19px;
+  height: 20px;
+  background-image: url('/img/quiz/proflie.svg');
+  z-index: 5;
+}
+
+.hero__right{
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+
+.final .hero__wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.hero__left{
+  max-width: 300px;
+  position: relative;
+}
+
+.hero__left img{
+  position: absolute;
+  top: calc(-544px/2);
+  left: -70px;
+}
+
+.final .hero__title{
+  text-align: left;
+  margin: 0;
+}
+
+.hero__social{
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  width: 220px;
+  height: 50px;
+  color: #269ED1;
+  text-decoration: none;
+}
+
+.hero__discription{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #434343;
+}
+
+
+@media (max-width: 1024px) {
+  .hero__left{
+    display: none;
+  }
+  .final .hero__wrapper{
+    display: flex;
+  }
+  .hero__wrapper{
+    width: 90vw;
+    position: relative;
+    left: 0;
+    margin: 0 auto;
+  }
 }

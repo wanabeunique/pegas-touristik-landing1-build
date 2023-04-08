@@ -1,7 +1,3 @@
-<?php
-  session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,6 +24,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="./resources/favicon/favicon-16x16.png">
 <link rel="manifest" href="./resources/favicon/site.webmanifest">
 <link rel="mask-icon" href="./resources/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="stylesheet" href="./css/quiz-mobile.css">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 </head>
@@ -37,30 +34,30 @@
   <body>
 
     <main class="main">
-      <form class="quiz" method="POST" action="/resources/send.php">
+      <form class="quiz" method="POST" action="./resources/send.php">
         <div class="quiz-left">
           <div>
             <!--  -->
-            <div class="quiz-wrapper active">
+            <div class="quiz-wrapper active first-question">
               <legend class="quiz-question">Сколько ночей планируете отдыхать?</legend>
               <div class="quiz-answers">
                 <label class="quiz-answer">
-                  <input type="radio" id="q1-a1" name="q1" value="1-2 Ночей">
+                  <input type="radio" id="q1-a1" name="q1" value="huey">
                   1-2 Ночей
                 </label>
 
                 <label class="quiz-answer">
-                  <input type="radio" id="q1-a2" name="q1" value="3-4 Ночей">
+                  <input type="radio" id="q1-a2" name="q1" value="dewey">
                   3-4 Ночей
                 </label>
 
                 <label class="quiz-answer">
-                  <input type="radio" id="q1-a3" name="q1" value="5-6 Ночей">
+                  <input type="radio" id="q1-a3" name="q1" value="louie">
                   5-6 Ночей
                 </label>
 
                 <label class="quiz-answer">
-                  <input type="radio" id="q1-a4" name="q1" value="7-8 Ночей">
+                  <input type="radio" id="q1-a4" name="q1" value="louie">
                   7-8 Ночей
                 </label>
               </div>
@@ -69,22 +66,22 @@
               <legend class="quiz-question">Сколько ночей планируете отдыхать? 2</legend>
               <div class="quiz-answers">
                 <label class="quiz-answer">
-                  <input type="radio" id="q2-a1" name="q2" value="1-2 Ночей">
+                  <input type="radio" id="q2-a1" name="q1" value="huey">
                   1-2 Ночей
                 </label>
 
                 <label class="quiz-answer">
-                  <input type="radio" id="q2-a2" name="q2" value="3-4 Ночей">
+                  <input type="radio" id="q2-a2" name="q1" value="dewey">
                   3-4 Ночей
                 </label>
 
                 <label class="quiz-answer">
-                  <input type="radio" id="q2-a3" name="q2" value="5-6 Ночей">
+                  <input type="radio" id="q2-a3" name="q1" value="louie">
                   5-6 Ночей
                 </label>
 
                 <label class="quiz-answer">
-                  <input type="radio" id="q2-a4" name="q2" value="7-8 Ночей">
+                  <input type="radio" id="q2-a4" name="q1" value="louie">
                   7-8 Ночей
                 </label>
               </div>
@@ -93,22 +90,22 @@
               <legend class="quiz-question">Сколько ночей планируете отдыхать? 3</legend>
               <div class="quiz-answers">
                 <label class="quiz-answer">
-                  <input type="radio" id="q3-a1" name="q3" value="1-2 Ночей">
+                  <input type="radio" id="q3-a1" name="q1" value="huey">
                   1-2 Ночей
                 </label>
 
                 <label class="quiz-answer">
-                  <input type="radio" id="q3-a2" name="q3" value="3-4 Ночей">
+                  <input type="radio" id="q3-a2" name="q1" value="dewey">
                   3-4 Ночей
                 </label>
 
                 <label class="quiz-answer">
-                  <input type="radio" id="q3-a3" name="q3" value="5-6 Ночей">
+                  <input type="radio" id="q3-a3" name="q1" value="louie">
                   5-6 Ночей
                 </label>
 
                 <label class="quiz-answer">
-                  <input type="radio" id="q3-a4" name="q3" value="7-8 Ночей">
+                  <input type="radio" id="q3-a4" name="q1" value="louie">
                   7-8 Ночей
                 </label>
               </div>
@@ -125,11 +122,13 @@
           </div>
         </div>
         <div class="quiz-next">
-          <div class="quiz-next-text">Готово 33%</div>
-          <div class="quiz-next__progress"></div>
+          <div class="quiz-next-text progress-status">Готово 1%</div>
+          <div class="quiz-next__progress">
+            <div class="quiz-next__progress-bar progress-line"></div>
+          </div>
           <div class="quiz-next__btns">
-            <button class="quiz-next__btn quiz-next__back">Назад</button>
-            <input type="button" class="quiz-next__btn quiz-next__next disabled-btn" value="Далее">
+            <button class="quiz-next__btn quiz-next__back quiz-prev" type="button" disabled>Назад</button>
+            <input type="button" class="quiz-next__btn quiz-next__next disabled-btn" disabled value="Далее">
           </div>
         </div>
       </form>
